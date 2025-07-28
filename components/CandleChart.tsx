@@ -13,7 +13,7 @@ import {
   ColorType,
 } from "lightweight-charts";
 import Controls from "./Controls";
-import QuizOverlay, { QuizData } from "./QuizOverlay";
+import QuizOverlay, { Quiz as QuizData } from "./QuizOverlay";
 import { computeRSI, computeBB, computeMACD } from "../lib/studies";
 
 export type Action = "LONG" | "SHORT" | "NONE";
