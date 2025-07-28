@@ -1,35 +1,32 @@
 // app/api/generate-quiz/route.ts
+
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! });
 
 export async function POST(request: Request) {
   try {
-    const { action, recentCandles, confluenceOptions } = await request.json();
+    // Validate and parse request body
+    interface Candle { time: number; open: number; high: number; low: number; close: number; }
+    interface QuizRequest { action: 'LONG' | 'SHORT' | 'NONE'; recentCandles: Candle[]; }
+    const { action, recentCandles } = (await request.json()) as QuizRequest;
 
     // Build detailed candlestick description for prompt
     const barsText = recentCandles
-      .map((c: any) =>
+      .map((c) =>
         `• Time: ${new Date(c.time * 1000).toISOString()}, Open: ${c.open}, High: ${c.high}, Low: ${c.low}, Close: ${c.close}`
       )
       .join('\n');
 
-    // Describe selected confluence signals
-    const confluenceText = confluenceOptions && confluenceOptions.length
-      ? `\n
-Confluence signals in play: ${confluenceOptions.join(', ')}.`
-      : '';
-
-    const prompt = `You are an expert technical analysis coach. A user has chosen to go ${action} after observing these recent candlestick bars and market context:${confluenceText}
-
+    const prompt = `You are an expert technical analysis coach. A user has chosen to go ${action} after observing these recent candlestick bars and associated market context:
 ${barsText}
 
-Using advanced technical analysis concepts (e.g., trendlines, support/resistance zones, moving averages, RSI, MACD, volume patterns, chart patterns, and specified Strat/ICT confluences), generate a robust multiple-choice question:
-1. 'question': A concise question asking why this trade makes sense based on the setup.
-2. 'options': An array of exactly 3 plausible, detailed TA-based reasons (one correct, two distractors) that reference indicators, patterns, or confluence signals.
-3. 'correctIndex': The 0-based index of the best answer.
-4. 'feedback': Specific feedback for each option, explaining why it's correct or not, citing TA principles and any selected confluences.
+Using advanced technical analysis concepts (e.g., trendlines, support/resistance zones, moving averages, RSI, MACD, volume patterns, chart patterns), generate a robust multiple-choice question:
+1. 'question': A clear, concise question asking why this trade makes sense.
+2. 'options': An array of exactly 3 plausible, detailed TA-based reasons (one correct, two distractors) that reference indicators, patterns, or price action.
+3. 'correctIndex': The index (0-based) of the best answer.
+4. 'feedback': Provide specific informative feedback for each option, explaining why it's correct or not, and referencing TA principles.
 
 Return only valid JSON. No markdown or code fences.`;
 
@@ -44,7 +41,7 @@ Return only valid JSON. No markdown or code fences.`;
 
     const raw = completion.choices?.[0]?.message?.content || '';
     const match = raw.match(/\{[\s\S]*\}/);
-    if (!match) throw new Error('No JSON found in response');
+    if (!match) throw new Error('No JSON found');
     const quiz = JSON.parse(match[0]);
 
     return NextResponse.json(quiz);
