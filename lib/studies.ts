@@ -11,10 +11,15 @@ const MACD_SIGNAL = 9;
 
 export function computeRSI(data: { time: number; close: number }[]): TimeValue[] {
   if (data.length <= RSI_PERIOD) return [];
-  let gains = 0, losses = 0;
+  let gains = 0;
+  let losses = 0;
   for (let i = 1; i <= RSI_PERIOD; i++) {
     const diff = data[i].close - data[i - 1].close;
-    diff >= 0 ? (gains += diff) : (losses -= diff);
+    if (diff >= 0) {
+      gains += diff;
+    } else {
+      losses -= diff;
+    }
   }
   let avgG = gains / RSI_PERIOD;
   let avgL = losses / RSI_PERIOD;
@@ -36,7 +41,8 @@ export function computeBB(data: { time: number; close: number }[]): { upper: Tim
   for (let i = BB_PERIOD - 1; i < data.length; i++) {
     const slice = data.slice(i - BB_PERIOD + 1, i + 1).map(d => d.close);
     const mean = slice.reduce((a, b) => a + b, 0) / BB_PERIOD;
-    const std = Math.sqrt(slice.reduce((a, b) => a + (b - mean) ** 2, 0) / BB_PERIOD);
+    const variance = slice.reduce((a, b) => a + (b - mean) ** 2, 0) / BB_PERIOD;
+    const std = Math.sqrt(variance);
     upper.push({ time: data[i].time, value: mean + BB_STDDEV * std });
     lower.push({ time: data[i].time, value: mean - BB_STDDEV * std });
   }
