@@ -1,4 +1,6 @@
 // components/CandleChart.tsx
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -143,7 +145,7 @@ export default function CandleChart() {
     const c = slice[slice.length - 1];
 
     // Price + BB
-    candleSeries.current?.setData(slice);
+    candleSeries.current?.setData(slice as any);
     if (showBB) {
       const { upper, lower } = computeBB(slice);
       bbUpperSeries.current?.setData(upper);
