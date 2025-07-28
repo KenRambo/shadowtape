@@ -1,0 +1,803 @@
+[
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:25:00\u202fAM",
+    "Open": 5881.5,
+    "High": 5886.5,
+    "Low": 5880.75,
+    "Close": 5884.0,
+    "PrevClose": 5881.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:30:00\u202fAM",
+    "Open": 5884.5,
+    "High": 5913.25,
+    "Low": 5884.5,
+    "Close": 5904.5,
+    "PrevClose": 5884.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:35:00\u202fAM",
+    "Open": 5904.5,
+    "High": 5909.25,
+    "Low": 5896.75,
+    "Close": 5897.25,
+    "PrevClose": 5904.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:40:00\u202fAM",
+    "Open": 5897.25,
+    "High": 5907.0,
+    "Low": 5896.75,
+    "Close": 5905.75,
+    "PrevClose": 5897.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:45:00\u202fAM",
+    "Open": 5905.75,
+    "High": 5908.0,
+    "Low": 5900.25,
+    "Close": 5904.5,
+    "PrevClose": 5905.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:50:00\u202fAM",
+    "Open": 5904.25,
+    "High": 5905.75,
+    "Low": 5900.5,
+    "Close": 5902.5,
+    "PrevClose": 5904.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 8:55:00\u202fAM",
+    "Open": 5902.5,
+    "High": 5905.25,
+    "Low": 5900.25,
+    "Close": 5902.5,
+    "PrevClose": 5902.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:00:00\u202fAM",
+    "Open": 5902.5,
+    "High": 5902.5,
+    "Low": 5895.25,
+    "Close": 5899.75,
+    "PrevClose": 5902.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:05:00\u202fAM",
+    "Open": 5899.75,
+    "High": 5904.5,
+    "Low": 5897.0,
+    "Close": 5899.5,
+    "PrevClose": 5899.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:10:00\u202fAM",
+    "Open": 5899.25,
+    "High": 5902.75,
+    "Low": 5897.25,
+    "Close": 5902.25,
+    "PrevClose": 5899.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:15:00\u202fAM",
+    "Open": 5902.0,
+    "High": 5905.5,
+    "Low": 5897.5,
+    "Close": 5905.5,
+    "PrevClose": 5902.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:20:00\u202fAM",
+    "Open": 5905.5,
+    "High": 5909.0,
+    "Low": 5902.75,
+    "Close": 5904.25,
+    "PrevClose": 5905.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:25:00\u202fAM",
+    "Open": 5904.0,
+    "High": 5911.0,
+    "Low": 5901.75,
+    "Close": 5907.5,
+    "PrevClose": 5904.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:30:00\u202fAM",
+    "Open": 5907.25,
+    "High": 5915.5,
+    "Low": 5900.5,
+    "Close": 5912.25,
+    "PrevClose": 5907.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:35:00\u202fAM",
+    "Open": 5912.5,
+    "High": 5931.75,
+    "Low": 5906.75,
+    "Close": 5930.75,
+    "PrevClose": 5912.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:40:00\u202fAM",
+    "Open": 5931.0,
+    "High": 5931.0,
+    "Low": 5914.25,
+    "Close": 5918.25,
+    "PrevClose": 5930.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:45:00\u202fAM",
+    "Open": 5918.25,
+    "High": 5922.5,
+    "Low": 5902.5,
+    "Close": 5906.25,
+    "PrevClose": 5918.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:50:00\u202fAM",
+    "Open": 5906.25,
+    "High": 5916.5,
+    "Low": 5898.25,
+    "Close": 5913.75,
+    "PrevClose": 5906.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 9:55:00\u202fAM",
+    "Open": 5913.75,
+    "High": 5918.0,
+    "Low": 5908.25,
+    "Close": 5910.0,
+    "PrevClose": 5913.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:00:00\u202fAM",
+    "Open": 5910.5,
+    "High": 5921.25,
+    "Low": 5910.5,
+    "Close": 5920.75,
+    "PrevClose": 5910.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:05:00\u202fAM",
+    "Open": 5920.5,
+    "High": 5929.5,
+    "Low": 5916.25,
+    "Close": 5916.25,
+    "PrevClose": 5920.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:10:00\u202fAM",
+    "Open": 5916.25,
+    "High": 5934.5,
+    "Low": 5911.25,
+    "Close": 5933.5,
+    "PrevClose": 5916.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:15:00\u202fAM",
+    "Open": 5933.25,
+    "High": 5937.0,
+    "Low": 5930.25,
+    "Close": 5934.75,
+    "PrevClose": 5933.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:20:00\u202fAM",
+    "Open": 5934.75,
+    "High": 5943.75,
+    "Low": 5933.0,
+    "Close": 5942.75,
+    "PrevClose": 5934.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:25:00\u202fAM",
+    "Open": 5942.75,
+    "High": 5960.75,
+    "Low": 5940.0,
+    "Close": 5959.75,
+    "PrevClose": 5942.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:30:00\u202fAM",
+    "Open": 5959.5,
+    "High": 5979.0,
+    "Low": 5958.75,
+    "Close": 5970.5,
+    "PrevClose": 5959.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:35:00\u202fAM",
+    "Open": 5970.75,
+    "High": 5974.75,
+    "Low": 5964.25,
+    "Close": 5971.75,
+    "PrevClose": 5970.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:40:00\u202fAM",
+    "Open": 5971.75,
+    "High": 5976.0,
+    "Low": 5967.25,
+    "Close": 5974.5,
+    "PrevClose": 5971.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:45:00\u202fAM",
+    "Open": 5974.5,
+    "High": 5976.0,
+    "Low": 5968.5,
+    "Close": 5972.0,
+    "PrevClose": 5974.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:50:00\u202fAM",
+    "Open": 5971.75,
+    "High": 5979.75,
+    "Low": 5971.75,
+    "Close": 5979.0,
+    "PrevClose": 5972.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 10:55:00\u202fAM",
+    "Open": 5979.0,
+    "High": 5982.5,
+    "Low": 5971.5,
+    "Close": 5972.25,
+    "PrevClose": 5979.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:00:00\u202fAM",
+    "Open": 5972.25,
+    "High": 5993.25,
+    "Low": 5970.5,
+    "Close": 5992.75,
+    "PrevClose": 5972.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:05:00\u202fAM",
+    "Open": 5993.0,
+    "High": 5998.25,
+    "Low": 5990.75,
+    "Close": 5994.5,
+    "PrevClose": 5992.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:10:00\u202fAM",
+    "Open": 5994.5,
+    "High": 6001.25,
+    "Low": 5993.75,
+    "Close": 6001.0,
+    "PrevClose": 5994.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:15:00\u202fAM",
+    "Open": 6000.75,
+    "High": 6010.75,
+    "Low": 5998.25,
+    "Close": 6006.75,
+    "PrevClose": 6001.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:20:00\u202fAM",
+    "Open": 6006.75,
+    "High": 6013.75,
+    "Low": 6004.25,
+    "Close": 6012.75,
+    "PrevClose": 6006.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:25:00\u202fAM",
+    "Open": 6012.75,
+    "High": 6014.5,
+    "Low": 6008.75,
+    "Close": 6014.5,
+    "PrevClose": 6012.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:30:00\u202fAM",
+    "Open": 6014.25,
+    "High": 6020.0,
+    "Low": 6013.25,
+    "Close": 6018.0,
+    "PrevClose": 6014.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:35:00\u202fAM",
+    "Open": 6018.0,
+    "High": 6035.0,
+    "Low": 6017.0,
+    "Close": 6034.75,
+    "PrevClose": 6018.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:40:00\u202fAM",
+    "Open": 6034.75,
+    "High": 6040.75,
+    "Low": 6030.0,
+    "Close": 6040.25,
+    "PrevClose": 6034.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:45:00\u202fAM",
+    "Open": 6040.0,
+    "High": 6040.25,
+    "Low": 6031.75,
+    "Close": 6033.5,
+    "PrevClose": 6040.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:50:00\u202fAM",
+    "Open": 6033.5,
+    "High": 6035.25,
+    "Low": 6023.25,
+    "Close": 6027.25,
+    "PrevClose": 6033.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 11:55:00\u202fAM",
+    "Open": 6027.5,
+    "High": 6039.25,
+    "Low": 6027.5,
+    "Close": 6035.75,
+    "PrevClose": 6027.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:00:00\u202fPM",
+    "Open": 6036.0,
+    "High": 6037.5,
+    "Low": 6030.0,
+    "Close": 6034.75,
+    "PrevClose": 6035.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:05:00\u202fPM",
+    "Open": 6035.0,
+    "High": 6039.5,
+    "Low": 6034.0,
+    "Close": 6038.75,
+    "PrevClose": 6034.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:10:00\u202fPM",
+    "Open": 6039.0,
+    "High": 6042.25,
+    "Low": 6037.75,
+    "Close": 6040.5,
+    "PrevClose": 6038.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:15:00\u202fPM",
+    "Open": 6040.5,
+    "High": 6044.0,
+    "Low": 6038.25,
+    "Close": 6041.25,
+    "PrevClose": 6040.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:20:00\u202fPM",
+    "Open": 6041.0,
+    "High": 6043.5,
+    "Low": 6037.75,
+    "Close": 6043.0,
+    "PrevClose": 6041.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:25:00\u202fPM",
+    "Open": 6043.0,
+    "High": 6050.75,
+    "Low": 6041.5,
+    "Close": 6049.25,
+    "PrevClose": 6043.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:30:00\u202fPM",
+    "Open": 6049.0,
+    "High": 6049.25,
+    "Low": 6031.0,
+    "Close": 6036.5,
+    "PrevClose": 6049.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:35:00\u202fPM",
+    "Open": 6036.75,
+    "High": 6044.5,
+    "Low": 6034.75,
+    "Close": 6043.0,
+    "PrevClose": 6036.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:40:00\u202fPM",
+    "Open": 6043.0,
+    "High": 6044.0,
+    "Low": 6036.5,
+    "Close": 6039.25,
+    "PrevClose": 6043.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:45:00\u202fPM",
+    "Open": 6039.25,
+    "High": 6043.75,
+    "Low": 6035.25,
+    "Close": 6043.25,
+    "PrevClose": 6039.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:50:00\u202fPM",
+    "Open": 6043.25,
+    "High": 6045.25,
+    "Low": 6040.5,
+    "Close": 6044.75,
+    "PrevClose": 6043.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 12:55:00\u202fPM",
+    "Open": 6045.0,
+    "High": 6047.0,
+    "Low": 6037.75,
+    "Close": 6038.75,
+    "PrevClose": 6044.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:00:00\u202fPM",
+    "Open": 6038.75,
+    "High": 6039.25,
+    "Low": 6033.25,
+    "Close": 6033.25,
+    "PrevClose": 6038.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:05:00\u202fPM",
+    "Open": 6033.25,
+    "High": 6034.75,
+    "Low": 6029.5,
+    "Close": 6030.75,
+    "PrevClose": 6033.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:10:00\u202fPM",
+    "Open": 6030.75,
+    "High": 6032.0,
+    "Low": 6029.0,
+    "Close": 6030.0,
+    "PrevClose": 6030.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:15:00\u202fPM",
+    "Open": 6030.0,
+    "High": 6031.0,
+    "Low": 6020.5,
+    "Close": 6026.5,
+    "PrevClose": 6030.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:20:00\u202fPM",
+    "Open": 6026.5,
+    "High": 6026.75,
+    "Low": 6016.75,
+    "Close": 6020.5,
+    "PrevClose": 6026.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:25:00\u202fPM",
+    "Open": 6020.75,
+    "High": 6022.25,
+    "Low": 6014.5,
+    "Close": 6015.0,
+    "PrevClose": 6020.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:30:00\u202fPM",
+    "Open": 6015.0,
+    "High": 6021.5,
+    "Low": 6014.25,
+    "Close": 6018.5,
+    "PrevClose": 6015.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:35:00\u202fPM",
+    "Open": 6018.75,
+    "High": 6022.5,
+    "Low": 6015.5,
+    "Close": 6017.25,
+    "PrevClose": 6018.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:40:00\u202fPM",
+    "Open": 6017.0,
+    "High": 6019.25,
+    "Low": 6014.25,
+    "Close": 6017.0,
+    "PrevClose": 6017.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:45:00\u202fPM",
+    "Open": 6017.0,
+    "High": 6018.25,
+    "Low": 6013.25,
+    "Close": 6014.25,
+    "PrevClose": 6017.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:50:00\u202fPM",
+    "Open": 6014.25,
+    "High": 6024.5,
+    "Low": 6011.5,
+    "Close": 6024.5,
+    "PrevClose": 6014.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 1:55:00\u202fPM",
+    "Open": 6024.25,
+    "High": 6027.25,
+    "Low": 6012.0,
+    "Close": 6013.5,
+    "PrevClose": 6024.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:00:00\u202fPM",
+    "Open": 6013.25,
+    "High": 6015.75,
+    "Low": 6011.0,
+    "Close": 6012.75,
+    "PrevClose": 6013.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:05:00\u202fPM",
+    "Open": 6012.5,
+    "High": 6016.5,
+    "Low": 6008.75,
+    "Close": 6015.0,
+    "PrevClose": 6012.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:10:00\u202fPM",
+    "Open": 6014.75,
+    "High": 6016.5,
+    "Low": 6011.25,
+    "Close": 6014.25,
+    "PrevClose": 6015.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:15:00\u202fPM",
+    "Open": 6014.25,
+    "High": 6018.25,
+    "Low": 6012.5,
+    "Close": 6017.25,
+    "PrevClose": 6014.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:20:00\u202fPM",
+    "Open": 6017.0,
+    "High": 6021.0,
+    "Low": 6014.5,
+    "Close": 6019.5,
+    "PrevClose": 6017.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:25:00\u202fPM",
+    "Open": 6019.5,
+    "High": 6026.75,
+    "Low": 6018.25,
+    "Close": 6025.75,
+    "PrevClose": 6019.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:30:00\u202fPM",
+    "Open": 6025.75,
+    "High": 6031.75,
+    "Low": 6024.5,
+    "Close": 6030.75,
+    "PrevClose": 6025.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:35:00\u202fPM",
+    "Open": 6031.0,
+    "High": 6032.75,
+    "Low": 6026.75,
+    "Close": 6026.75,
+    "PrevClose": 6030.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:40:00\u202fPM",
+    "Open": 6027.0,
+    "High": 6027.75,
+    "Low": 6023.5,
+    "Close": 6025.0,
+    "PrevClose": 6026.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:45:00\u202fPM",
+    "Open": 6025.25,
+    "High": 6025.75,
+    "Low": 6019.5,
+    "Close": 6020.25,
+    "PrevClose": 6025.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:50:00\u202fPM",
+    "Open": 6020.25,
+    "High": 6023.0,
+    "Low": 6014.25,
+    "Close": 6017.75,
+    "PrevClose": 6020.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 2:55:00\u202fPM",
+    "Open": 6017.75,
+    "High": 6020.0,
+    "Low": 6015.25,
+    "Close": 6017.25,
+    "PrevClose": 6017.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:00:00\u202fPM",
+    "Open": 6017.25,
+    "High": 6021.25,
+    "Low": 6016.75,
+    "Close": 6018.5,
+    "PrevClose": 6017.25
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:05:00\u202fPM",
+    "Open": 6018.5,
+    "High": 6021.5,
+    "Low": 6015.75,
+    "Close": 6016.0,
+    "PrevClose": 6018.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:10:00\u202fPM",
+    "Open": 6016.25,
+    "High": 6018.5,
+    "Low": 6014.5,
+    "Close": 6015.0,
+    "PrevClose": 6016.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:15:00\u202fPM",
+    "Open": 6015.25,
+    "High": 6016.5,
+    "Low": 6012.75,
+    "Close": 6014.0,
+    "PrevClose": 6015.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:20:00\u202fPM",
+    "Open": 6014.0,
+    "High": 6015.25,
+    "Low": 6007.25,
+    "Close": 6011.5,
+    "PrevClose": 6014.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:25:00\u202fPM",
+    "Open": 6011.5,
+    "High": 6015.75,
+    "Low": 6009.0,
+    "Close": 6009.75,
+    "PrevClose": 6011.5
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:30:00\u202fPM",
+    "Open": 6010.0,
+    "High": 6013.0,
+    "Low": 5991.25,
+    "Close": 5993.0,
+    "PrevClose": 6009.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:35:00\u202fPM",
+    "Open": 5993.0,
+    "High": 6012.5,
+    "Low": 5992.5,
+    "Close": 6008.75,
+    "PrevClose": 5993.0
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:40:00\u202fPM",
+    "Open": 6008.75,
+    "High": 6014.0,
+    "Low": 6001.75,
+    "Close": 6006.75,
+    "PrevClose": 6008.75
+  },
+  {
+    "Symbol": "/ES:XCME",
+    "DateTime": "12/20/2024 3:45:00\u202fPM",
+    "Open": 6006.75,
+    "High": 6016.25,
+    "Low": 6006.25,
+    "Close": 6012.0,
+    "PrevClose": 6006.75
+  }
+]
