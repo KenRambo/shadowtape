@@ -1,5 +1,6 @@
-// components/CandleChart.tsx
 // eslint-disable-next-line react-hooks/exhaustive-deps
+// components/CandleChart.tsx
+
 
 "use client";
 
