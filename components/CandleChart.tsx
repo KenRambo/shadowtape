@@ -146,7 +146,14 @@ export default function CandleChart() {
     const c = slice[slice.length - 1];
 
     // Price + BB
-    candleSeries.current?.setData(slice as any);
+    const candlestickData: CandlestickData[] = slice.map(c => ({
+      time: c.time as unknown as CandlestickData['time'],
+      open: c.open,
+      high: c.high,
+      low: c.low,
+      close: c.close,
+    }));
+    candleSeries.current?.setData(candlestickData);
     if (showBB) {
       const { upper, lower } = computeBB(slice);
       bbUpperSeries.current?.setData(upper);
