@@ -1,7 +1,4 @@
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // components/CandleChart.tsx
-
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -15,14 +12,19 @@ import {
   SeriesMarker,
   ColorType,
 } from "lightweight-charts";
-import type { CandlestickData } from 'lightweight-charts';
+import type {
+  CandlestickData,
+  LineData,
+  UTCTimestamp,
+} from "lightweight-charts";
 import Controls from "./Controls";
 import QuizOverlay, { Quiz as QuizData } from "./QuizOverlay";
 import { computeRSI, computeBB, computeMACD } from "../lib/studies";
 
 export type Action = "LONG" | "SHORT" | "NONE";
+
 interface Candle {
-  time: number;
+  time: number; // Unix timestamp (seconds)
   open: number;
   high: number;
   low: number;
@@ -30,12 +32,12 @@ interface Candle {
 }
 
 export default function CandleChart() {
-  // Chart container refs
+  // DOM refs
   const priceRef = useRef<HTMLDivElement>(null);
   const rsiRef = useRef<HTMLDivElement>(null);
   const macdRef = useRef<HTMLDivElement>(null);
 
-  // Series refs
+  // series refs
   const candleSeries = useRef<ISeriesApi<"Candlestick"> | null>(null);
   const bbUpperSeries = useRef<ISeriesApi<"Line"> | null>(null);
   const bbLowerSeries = useRef<ISeriesApi<"Line"> | null>(null);
@@ -44,7 +46,7 @@ export default function CandleChart() {
   const signalSeries = useRef<ISeriesApi<"Line"> | null>(null);
   const histSeries = useRef<ISeriesApi<"Histogram"> | null>(null);
 
-  // State
+  // state
   const [candles, setCandles] = useState<Candle[]>([]);
   const [index, setIndex] = useState(0);
   const [entryPrice, setEntryPrice] = useState<number | null>(null);
@@ -57,12 +59,12 @@ export default function CandleChart() {
   const [quiz, setQuiz] = useState<QuizData | null>(null);
   const [markers, setMarkers] = useState<SeriesMarker<"time">[]>([]);
 
-  // Study toggles
+  // study toggles
   const [showRSI, setShowRSI] = useState(true);
   const [showBB, setShowBB] = useState(true);
   const [showMACD, setShowMACD] = useState(true);
 
-  // Load data once
+  // load data
   useEffect(() => {
     fetch("/data/ES-Data4-formatted.json")
       .then((r) => r.json())
@@ -70,7 +72,7 @@ export default function CandleChart() {
       .catch(console.error);
   }, []);
 
-  // Initialize price, RSI & MACD charts
+  // init charts
   useEffect(() => {
     if (!priceRef.current || !rsiRef.current || !macdRef.current || candles.length === 0)
       return;
@@ -114,7 +116,7 @@ export default function CandleChart() {
     signalSeries.current = mc.addSeries(LineSeries, { color: "#FFC107", lineWidth: 1 });
     histSeries.current = mc.addSeries(HistogramSeries, { color: "rgba(255,152,0,0.5)" });
 
-    // Responsively resize all three
+    // responsive resizing
     const ro = new ResizeObserver(() => {
       const w = priceRef.current!.clientWidth;
       pc.applyOptions({ width: w });
@@ -133,68 +135,108 @@ export default function CandleChart() {
     };
   }, [candles]);
 
-  // Play / Pause ticker
+  // play/pause ticker
   useEffect(() => {
     if (!isPlaying) return;
     const iv = setInterval(() => setIndex((i) => Math.min(i + 1, candles.length - 1)), 500);
     return () => clearInterval(iv);
   }, [isPlaying, candles]);
 
-  // Update charts & PnL on each new bar
+  // update series & PnL
   useEffect(() => {
     if (index === 0) return;
     const slice = candles.slice(0, index + 1);
-    const c = slice[slice.length - 1];
+    const last = slice[slice.length - 1];
 
-    // Price + BB
-    const candlestickData: CandlestickData[] = slice.map(c => ({
-      time: c.time as unknown as CandlestickData['time'],
+    // map to CandlestickData
+    const candleData: CandlestickData[] = slice.map((c) => ({
+      time: c.time as unknown as UTCTimestamp,
       open: c.open,
       high: c.high,
       low: c.low,
       close: c.close,
     }));
-    candleSeries.current?.setData(candlestickData);
+    candleSeries.current?.setData(candleData);
+
+    // Bollinger Bands
     if (showBB) {
       const { upper, lower } = computeBB(slice);
-      bbUpperSeries.current?.setData(upper);
-      bbLowerSeries.current?.setData(lower);
+      const bbUp: LineData[] = upper.map((d) => ({
+        time: d.time as unknown as UTCTimestamp,
+        value: d.value,
+      }));
+      const bbLo: LineData[] = lower.map((d) => ({
+        time: d.time as unknown as UTCTimestamp,
+        value: d.value,
+      }));
+      bbUpperSeries.current?.setData(bbUp);
+      bbLowerSeries.current?.setData(bbLo);
     } else {
       bbUpperSeries.current?.setData([]);
       bbLowerSeries.current?.setData([]);
     }
 
     // RSI
-    if (showRSI) rsiSeries.current?.setData(computeRSI(slice));
-    else rsiSeries.current?.setData([]);
+    if (showRSI) {
+      const rsiVals = computeRSI(slice);
+      const rsiData: LineData[] = rsiVals.map((d) => ({
+        time: d.time as unknown as UTCTimestamp,
+        value: d.value,
+      }));
+      rsiSeries.current?.setData(rsiData);
+    } else {
+      rsiSeries.current?.setData([]);
+    }
 
     // MACD
     if (showMACD) {
       const { macd, signal, hist } = computeMACD(slice);
-      macdSeries.current?.setData(macd);
-      signalSeries.current?.setData(signal);
-      histSeries.current?.setData(hist);
+      const macdData: LineData[] = macd.map((d) => ({
+        time: d.time as unknown as UTCTimestamp,
+        value: d.value,
+      }));
+      const signalData: LineData[] = signal.map((d) => ({
+        time: d.time as unknown as UTCTimestamp,
+        value: d.value,
+      }));
+      const histData: LineData[] = hist.map((d) => ({
+        time: d.time as unknown as UTCTimestamp,
+        value: d.value,
+      }));
+      macdSeries.current?.setData(macdData);
+      signalSeries.current?.setData(signalData);
+      histSeries.current?.setData(histData);
     } else {
       macdSeries.current?.setData([]);
       signalSeries.current?.setData([]);
       histSeries.current?.setData([]);
     }
 
-    // Calculate PnL & balance
+    // compute PnL & balance
     if (entryPrice !== null) {
-      const diff = c.close - entryPrice;
-      const unit = position === "LONG" ? diff : position === "SHORT" ? -diff : 0;
-      const tot = unit * tradeSize;
+      const diff = last.close - entryPrice;
+      const unitPnl = position === "LONG" ? diff : position === "SHORT" ? -diff : 0;
+      const tot = unitPnl * tradeSize;
       setTotalPnl(tot);
       setBalance(tot);
       setPercentPnl(entryPrice * tradeSize ? (tot / (entryPrice * tradeSize)) * 100 : 0);
     }
 
-    // Re‑draw entry markers
+    // redraw markers
     createSeriesMarkers(candleSeries.current!, markers);
-  }, [index, showRSI, showBB, showMACD, candles]);
+  }, [
+    index,
+    showBB,
+    showRSI,
+    showMACD,
+    candles,
+    entryPrice,
+    position,
+    tradeSize,
+    markers,
+  ]);
 
-  // Handle a user trade
+  // handle trade button click
   const handleTrade = async (action: Action) => {
     setPosition(action);
     setIsPlaying(false);
@@ -211,13 +253,13 @@ export default function CandleChart() {
       },
     ]);
 
-    const recent = candles.slice(Math.max(0, index - 14 + 1), index + 1);
-    const response = await fetch("/api/generate-quiz", {
+    const recent = candles.slice(Math.max(0, index - 13), index + 1);
+    const res = await fetch("/api/generate-quiz", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action, recentCandles: recent }),
     });
-    const quizData: QuizData = await response.json();
+    const quizData: QuizData = await res.json();
     setQuiz(quizData);
   };
 
@@ -235,7 +277,6 @@ export default function CandleChart() {
           onTrade={handleTrade}
           onTogglePlay={() => setIsPlaying((p) => !p)}
           isPlaying={isPlaying}
-          pnl={totalPnl}
           tradeSize={tradeSize}
           onSizeChange={setTradeSize}
           totalPnl={totalPnl}
